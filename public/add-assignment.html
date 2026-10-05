@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add Assignment</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Add New Assignment</h1>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/add-assignment.html">Add Assignment</a>
+        <a href="/assignments.html">View Assignments</a>
+    </nav>
+
+    <form action="/add-assignment" method="POST">
+
+        <label for="subject">Subject</label>
+
+        <input
+            type="text"
+            id="subject"
+            name="subject"
+            placeholder="Enter subject"
+            required
+        >
+
+
+        <label for="title">Assignment Title</label>
+
+        <input
+            type="text"
+            id="title"
+            name="title"
+            placeholder="Enter assignment title"
+            required
+        >
+
+
+        <label for="description">Description</label>
+
+        <textarea
+            id="description"
+            name="description"
+            placeholder="Enter assignment description"
+        ></textarea>
+
+
+        <label for="dueDate">Due Date</label>
+
+        <input
+            type="date"
+            id="dueDate"
+            name="dueDate"
+            required
+        >
+
+
+        <label for="priority">Priority</label>
+
+        <select id="priority" name="priority">
+
+            <option value="High">High</option>
+
+            <option value="Medium">Medium</option>
+
+            <option value="Low">Low</option>
+
+        </select>
+
+
+        <button type="submit">
+            Add Assignment
+        </button>
+
+    </form>
+
+</body>
+
+</html>

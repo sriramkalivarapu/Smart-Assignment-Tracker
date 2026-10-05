@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1788288803591,
+    "subject": "Data Mining",
+    "title": "assignment sample",
+    "description": "data cubes,data warehouse architecture",
+    "dueDate": "12-09-2026",
+    "priority": "medium",
+    "status": "Completed"
+  },
+  {
+    "id": 1788967080892,
+    "subject": "fs",
+    "title": "express.js",
+    "description": "all concepts ",
+    "dueDate": "2026-09-10",
+    "priority": "High",
+    "status": "Pending"
+  },
+  {
+    "id": 1789450053947,
+    "subject": "DAA",
+    "title": "codetantra",
+    "description": "all programs",
+    "dueDate": "2026-10-01",
+    "priority": "medium",
+    "status": "Pending"
+  },
+  {
+    "id": 1790010228023,
+    "subject": "Full Stack",
+    "title": "mini project",
+    "description": "develop a web application by using html,css,express js,node js only",
+    "dueDate": "2026-09-22",
+    "priority": "High",
+    "status": "Pending"
+  }
+]

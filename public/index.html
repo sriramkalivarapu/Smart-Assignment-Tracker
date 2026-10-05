@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Assignment Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Smart Student Assignment Tracker</h1>
+    <nav>
+    <a href="/">Home</a>
+    <a href="/add-assignment.html">Add Assignment</a>
+    <a href="/assignments.html">View Assignments</a>
+</nav>
+<h2>My Assignment Dashboard</h2>
+<div class="dashboard">
+
+    <div class="card">
+        <h3>Total Assignments</h3>
+        <p id="totalAssignments">0</p>
+    </div>
+
+    <div class="card">
+        <h3>Pending Assignments</h3>
+        <p id="pendingAssignments">0</p>
+    </div>
+
+    <div class="card">
+        <h3>Completed Assignments</h3>
+        <p id="completedAssignments">0</p>
+    </div>
+
+</div>
+<script>
+
+    async function updateDashboard() {
+
+        const response = await fetch("/api/assignments");
+
+        const assignments = await response.json();
+
+        const total = assignments.length;
+
+        const pending = assignments.filter(
+            assignment => assignment.status === "Pending"
+        ).length;
+
+        const completed = assignments.filter(
+            assignment => assignment.status === "Completed"
+        ).length;
+
+        document.getElementById("totalAssignments").textContent = total;
+
+        document.getElementById("pendingAssignments").textContent = pending;
+
+        document.getElementById("completedAssignments").textContent = completed;
+    }
+
+    updateDashboard();
+
+</script>
+</div>
+</body>
+</html>
